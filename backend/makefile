@@ -20,6 +20,14 @@ run-poetry:
 run-no-poetry:
 	python $(SRC_PATH)/$(MAIN_SCRIPT)
 
+# Install dependenciess through poetry
+configure-poetry:
+	poetry install
+
+# Install dependencies through pip
+configure-pip:
+	python3 -m pip install -r requirements.txt
+
 # Run tests
 test:
 	make clean-pyc
